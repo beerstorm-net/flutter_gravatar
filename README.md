@@ -1,14 +1,21 @@
-# gravatar
+# flutter_gravatar
 
-A new Flutter package project.
+An easy to use Flutter/Dart package for generating Gravatar image and profile urls. 
 
-## Getting Started
+For more information about Gravatar please visit https://gravatar.com  
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+## Example  
+```
+final gravatar = Gravatar("yg@beerstorm.net");  
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+// get Gravatar HASH for this user
+gravatar.gravatarHash();
+
+// get Gravatar imageUrl
+gravatar.gravatarImageUrl();
+
+// get Gravatar profileUrl
+gravatar.gravatarProfileUrl();// default .json
+gravatar.gravatarProfileUrl(".xml");// supported formats: .json, .xml, .vcf, .qr
+   
+```
