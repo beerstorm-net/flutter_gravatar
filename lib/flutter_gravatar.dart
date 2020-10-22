@@ -9,12 +9,14 @@ import 'utils.dart';
 class Gravatar {
   String _email;
   String _gravatarUrl; // = "https://www.gravatar.com/"; // /avatar for images
-  static initGravatarUrl(gravatarUrl) =>
+  static _initGravatarUrl(gravatarUrl) =>
       Utils.nullSafe(gravatarUrl).isNotEmpty ? gravatarUrl : "https://www.gravatar.com/";
+
+  /// init with email as parameter
   Gravatar(String email, {String gravatarUrl})
       : assert(Utils.nullSafe(email).isNotEmpty && email.trim().isValidEmail()),
         this._email = email.trim().toLowerCase(),
-        this._gravatarUrl = initGravatarUrl(gravatarUrl);
+        this._gravatarUrl = _initGravatarUrl(gravatarUrl);
 
   String _generateMd5(String inputStr) {
     return md5.convert(utf8.encode(inputStr)).toString();

@@ -1,5 +1,5 @@
+import 'package:flutter_gravatar/flutter_gravatar.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:gravatar/gravatar.dart';
 
 void main() {
   test('generate gravatar urls', () {
