@@ -17,5 +17,14 @@ gravatar.gravatarImageUrl();
 // get Gravatar profileUrl
 gravatar.gravatarProfileUrl();// default .json
 gravatar.gravatarProfileUrl(".xml");// supported formats: .json, .xml, .vcf, .qr
-   
+```  
+  
+## Install  
 ```
+dependencies:  
+    flutter_gravatar: any
+```  
+
+## Support  
+You can file issues at https://github.com/beerstorm-net/flutter_gravatar/issues  
+Pull requests are welcome.  
