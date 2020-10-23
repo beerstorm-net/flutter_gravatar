@@ -23,17 +23,23 @@ class Gravatar {
   }
 
   /// generate MD5 HASH from email, used for Gravatar API requests
-  String gravatarHash() {
+  String hash() {
     return _generateMd5(_email);
   }
 
   /// generate ImageUrl for Gravatar
-  String gravatarImageUrl() {
-    return _gravatarUrl + "avatar/" + _generateMd5(_email);
+  String imageUrl({int size = 80, String defaultImage = "identicon", String rating = "g"}) {
+    String _imageUrl = _gravatarUrl + "avatar/" + _generateMd5(_email);
+
+    _imageUrl += "?" + "s=" + size.toString();
+    _imageUrl += "&" + "r=" + rating;
+    _imageUrl += "&" + "d=" + defaultImage;
+
+    return _imageUrl;
   }
 
   /// generate ProfileUrl for Gravatar
-  String gravatarProfileUrl({String type = ".json"}) {
+  String profileUrl({String type = ".json"}) {
     if (Utils.nullSafe(type).isNotEmpty) {
       type = type.toLowerCase().trim();
     }

@@ -9,17 +9,17 @@ void main() {
 
   test('generate gravatar hash', () {
     final gravatar = Gravatar(_email);
-    expect(gravatar.gravatarHash(), _hash);
+    expect(gravatar.hash(), _hash);
   });
 
   test('generate gravatar imageUrl', () {
     final gravatar = Gravatar(_email);
-    expect(gravatar.gravatarImageUrl(), _gravatarUrl + "avatar/" + _hash);
+    expect(gravatar.imageUrl(), startsWith(_gravatarUrl + "avatar/" + _hash));
   });
 
   test('generate gravatar profileUrl', () {
     final gravatar = Gravatar(_email);
-    expect(gravatar.gravatarProfileUrl(), _gravatarUrl + _hash + ".json");
-    expect(gravatar.gravatarProfileUrl(type: "vcf"), _gravatarUrl + _hash + ".vcf");
+    expect(gravatar.profileUrl(), _gravatarUrl + _hash + ".json");
+    expect(gravatar.profileUrl(type: "vcf"), _gravatarUrl + _hash + ".vcf");
   });
 }
