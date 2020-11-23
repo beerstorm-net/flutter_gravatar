@@ -1,3 +1,7 @@
+## [1.0.2] - formatting
+
+* formatting and ckeanup  
+
 ## [1.0.1] - Customized imageUrl
 
 * Gravatar imageUrl with custom attributes.  

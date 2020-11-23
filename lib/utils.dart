@@ -8,7 +8,9 @@ extension EmailValidator on String {
 
 class Utils {
   static String nullSafe(String source) {
-    return (source == null || source.trim().isEmpty || source == "null") ? "" : source;
+    return (source == null || source.trim().isEmpty || source == "null")
+        ? ""
+        : source;
   }
 
   static bool validateEmail(String value) {
