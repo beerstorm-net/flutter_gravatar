@@ -15,7 +15,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 1.0.0+1
+version: 1.0.1+1
 
 environment:
   sdk: '>=2.12.0-0 <3.0.0'
@@ -23,21 +23,21 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-  flutter_gravatar:
-    path: ../
-  # NB! below examples are for using published versions in your project
-  #flutter_gravatar: ^2.0.0-nullsafety.0
-  #flutter_gravatar:
-  #  git: git://github.com/beerstorm-net/flutter_gravatar.git
+#  flutter_test:
+#    sdk: flutter
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
+  crypto: ^3.0.0
+  flutter_gravatar:
+    path: ../
+  # NB! below examples are for using published versions in your project
+  #flutter_gravatar: ^2.0.0-nullsafety.0
+  #flutter_gravatar:
+  #  git: git://github.com/beerstorm-net/flutter_gravatar.git
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

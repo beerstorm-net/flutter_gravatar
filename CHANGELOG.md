@@ -1,3 +1,7 @@
+## [2.0.1-nullsafety.1] - fixes based on analysis
+
+* fixes based on analysis
+
 ## [2.0.1-nullsafety.0] - added Example project
 
 * added Example project

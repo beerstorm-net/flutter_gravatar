@@ -46,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   void initState() {
-    // default values
+    /// default values to use in displaying
     _email = "yg@beerstorm.net";
     _gravatar = Gravatar(_email!);
     super.initState();
@@ -74,6 +74,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
+
+          /// Form to enter email address
           Form(
             key: _formKey,
             child: Column(
@@ -86,6 +88,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     labelText: 'Email',
                     hintText: 'Enter an email address',
                   ),
+
+                  /// ensure that it is a valid email address
                   validator: (value) {
                     if (value!.isEmpty || !value.trim().isValidEmail()) {
                       return 'a valid Email is required';
@@ -100,6 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: const Text('Continue'),
                   onPressed: () {
                     //_formKey.currentState.save();
+                    /// update Gravatar usign the enterered email address
                     if (_formKey.currentState!.validate()) {
                       setState(() {
                         _email = _formInput["email"];

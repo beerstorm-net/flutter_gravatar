@@ -1,6 +1,6 @@
 # flutter_gravatar
 
-An easy to use Flutter/Dart package for generating Gravatar image and profile urls. 
+An easy-to-use Flutter/Dart package for generating Gravatar image and profile urls. 
 
 For more information about Gravatar please visit https://gravatar.com  
 
@@ -23,7 +23,7 @@ gravatar.hash();
 `imageUrl({int size, String defaultImage, bool forceDefault: false, String rating})`  
 Generates an image url
 
-- size (Imagesize) default: 80 
+- size (ImageSize) default: 80 
 - defaultImage (Url or Kind for the Fallback Image) default: identicon  
 - forceDefault (force the Fallback Image) default: false
 - rating (restrict to appropriate Images) default: g
