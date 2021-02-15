@@ -1,6 +1,15 @@
+## [2.0.1-nullsafety.0] - added Example project
+
+* added Example project
+
+## [2.0.0-nullsafety.0] - null safety
+
+* migrate to Null safety
+
+
 ## [1.0.2] - formatting
 
-* formatting and ckeanup  
+* formatting and cleanup  
 
 ## [1.0.1] - Customized imageUrl
 

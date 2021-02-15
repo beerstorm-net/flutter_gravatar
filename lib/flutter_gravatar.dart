@@ -9,13 +9,11 @@ import 'utils.dart';
 class Gravatar {
   String _email;
   String _gravatarUrl; // = "https://www.gravatar.com/"; // /avatar for images
-  static _initGravatarUrl(gravatarUrl) => Utils.nullSafe(gravatarUrl).isNotEmpty
-      ? gravatarUrl
-      : "https://www.gravatar.com/";
+  static _initGravatarUrl(gravatarUrl) => gravatarUrl.isNotEmpty ? gravatarUrl : "https://www.gravatar.com/";
 
   /// init with email as parameter
-  Gravatar(String email, {String gravatarUrl})
-      : assert(Utils.nullSafe(email).isNotEmpty && email.trim().isValidEmail()),
+  Gravatar(String email, {String gravatarUrl = ""})
+      : assert(email.isNotEmpty && email.trim().isValidEmail()),
         this._email = email.trim().toLowerCase(),
         this._gravatarUrl = _initGravatarUrl(gravatarUrl);
 
@@ -29,8 +27,7 @@ class Gravatar {
   }
 
   /// generate ImageUrl for Gravatar
-  String imageUrl(
-      {int size = 80, String defaultImage = "identicon", String rating = "g"}) {
+  String imageUrl({int size = 80, String defaultImage = "identicon", String rating = "g"}) {
     String _imageUrl = _gravatarUrl + "avatar/" + _generateMd5(_email);
 
     _imageUrl += "?" + "s=" + size.toString();
@@ -42,7 +39,7 @@ class Gravatar {
 
   /// generate ProfileUrl for Gravatar
   String profileUrl({String type = ".json"}) {
-    if (Utils.nullSafe(type).isNotEmpty) {
+    if (type.isNotEmpty) {
       type = type.toLowerCase().trim();
     }
     type = !type.startsWith(".") ? ("." + type) : type;
