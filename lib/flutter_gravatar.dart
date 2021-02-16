@@ -9,7 +9,8 @@ import 'utils.dart';
 class Gravatar {
   String _email;
   String _gravatarUrl; // = "https://www.gravatar.com/"; // /avatar for images
-  static _initGravatarUrl(gravatarUrl) => gravatarUrl.isNotEmpty ? gravatarUrl : "https://www.gravatar.com/";
+  static _initGravatarUrl(gravatarUrl) =>
+      gravatarUrl.isNotEmpty ? gravatarUrl : "https://www.gravatar.com/";
 
   /// init with email as parameter
   Gravatar(String email, {String gravatarUrl = ""})
@@ -27,7 +28,8 @@ class Gravatar {
   }
 
   /// generate ImageUrl for Gravatar
-  String imageUrl({int size = 80, String defaultImage = "identicon", String rating = "g"}) {
+  String imageUrl(
+      {int size = 80, String defaultImage = "identicon", String rating = "g"}) {
     String _imageUrl = _gravatarUrl + "avatar/" + _generateMd5(_email);
 
     _imageUrl += "?" + "s=" + size.toString();

@@ -1,3 +1,7 @@
+## [2.0.2-nullsafety.2] - ensure formatting
+
+* ensure formatting
+
 ## [2.0.1-nullsafety.1] - fixes based on analysis
 
 * fixes based on analysis

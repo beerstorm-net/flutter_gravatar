@@ -136,7 +136,7 @@ packages:
     source: hosted
     version: "0.2.19"
   typed_data:
-    dependency: "direct overridden"
+    dependency: transitive
     description:
       name: typed_data
       url: "https://pub.dartlang.org"
