@@ -1,3 +1,8 @@
+## [2.0.2] - Make a release with nullsafety
+
+* Make a release with nullsafety
+
+
 ## [2.0.2-nullsafety.2] - ensure formatting
 
 * ensure formatting
